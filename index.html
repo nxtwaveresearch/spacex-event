@@ -6,10 +6,10 @@
 <title>SpaceX Is Just The Beginning — Free Live Webinar with Matt McCall</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap');
-
+ 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { background: #0b1628; color: #e8edf5; font-family: 'Source Serif 4', Georgia, serif; font-weight: 300; min-height: 100vh; overflow-x: hidden; }
-
+ 
   /* ── BACKGROUND ── */
   .bg {
     position: fixed;
@@ -56,7 +56,7 @@
     0%,100% { opacity: var(--op,.4); }
     50% { opacity: 0.05; }
   }
-
+ 
   /* ── PAGE ── */
   .page {
     position: relative;
@@ -65,23 +65,23 @@
     margin: 0 auto;
     padding: 0 28px 80px;
   }
-
+ 
   .topbar { display: flex; align-items: center; justify-content: space-between; padding: 32px 0 0; animation: fadeDown 0.6s ease both; }
   .brand { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: #89c0f0; }
   .badge { display: flex; align-items: center; gap: 8px; border: 1px solid rgba(91,155,213,0.22); border-radius: 2px; padding: 6px 14px; font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #e8edf5; background: rgba(11,22,40,0.6); }
   .dot { width: 6px; height: 6px; border-radius: 50%; background: #5b9bd5; animation: blink 1.8s ease-in-out infinite; }
   @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.2; } }
-
+ 
   .rule { height: 1px; background: linear-gradient(90deg, transparent, rgba(91,155,213,0.22), transparent); margin: 28px 0; animation: fadeIn 0.8s 0.2s ease both; }
-
+ 
   .meta { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 44px; animation: fadeUp 0.6s 0.2s ease both; }
   .meta span { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #89c0f0; }
-
+ 
   .title { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: clamp(72px, 15vw, 116px); line-height: 0.88; letter-spacing: 0.05em; text-transform: uppercase; color: #e8edf5; margin-bottom: 8px; animation: fadeUp 0.6s 0.28s ease both; }
   .subtitle { font-family: 'Source Serif 4', Georgia, serif; font-weight: 300; font-style: italic; font-size: clamp(24px, 4.5vw, 38px); color: #89c0f0; line-height: 1.2; animation: fadeUp 0.6s 0.32s ease both; }
   .hrule { width: 40px; height: 2px; background: #5b9bd5; margin: 18px 0; animation: fadeUp 0.6s 0.34s ease both; }
   .tagline { font-size: 15px; line-height: 1.75; color: rgba(232,237,245,0.55); max-width: 540px; font-weight: 300; margin-bottom: 44px; animation: fadeUp 0.6s 0.36s ease both; }
-
+ 
   /* FORM */
   .form-card { background: #112244; border: 1px solid rgba(91,155,213,0.22); border-radius: 3px; padding: 36px 36px 30px; margin: 44px 0; position: relative; animation: fadeUp 0.6s 0.4s ease both; }
   .form-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #5b9bd5, transparent); border-radius: 3px 3px 0 0; }
@@ -95,37 +95,37 @@
   .submit-btn:hover { background: #89c0f0; }
   .submit-btn:active { transform: scale(0.98); }
   .form-fine { margin-top: 13px; font-size: 11px; color: rgba(232,237,245,0.25); }
-
+ 
   .success-msg { display: none; text-align: center; padding: 14px 0 6px; }
   .success-msg .check { font-size: 36px; margin-bottom: 12px; }
   .success-msg h3 { font-family: 'Rajdhani', sans-serif; font-size: 28px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #89c0f0; margin-bottom: 8px; }
   .success-msg p { font-size: 14px; color: rgba(232,237,245,0.55); line-height: 1.65; }
-
+ 
   /* BULLETS */
   .section { margin: 52px 0; animation: fadeUp 0.6s 0.44s ease both; }
   .section-label { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: #5b9bd5; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(91,155,213,0.22); }
   .bullets { list-style: none; display: flex; flex-direction: column; gap: 16px; }
   .bullets li { display: flex; gap: 18px; font-size: 15px; line-height: 1.7; color: rgba(232,237,245,0.72); }
   .num { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 12px; color: #5b9bd5; letter-spacing: 0.06em; min-width: 24px; padding-top: 3px; flex-shrink: 0; }
-
+ 
   /* PRESENTER */
   .presenter { display: flex; align-items: center; gap: 22px; background: rgba(91,155,213,0.1); border: 1px solid rgba(91,155,213,0.22); border-radius: 3px; padding: 26px 28px; margin: 52px 0; animation: fadeUp 0.6s 0.5s ease both; }
   .avatar { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, rgba(91,155,213,0.22), rgba(91,155,213,0.04)); border: 1px solid rgba(91,155,213,0.22); display: flex; align-items: center; justify-content: center; font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 20px; color: #89c0f0; flex-shrink: 0; }
   .pname { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 5px; color: #e8edf5; }
   .pbio { font-size: 13px; color: rgba(232,237,245,0.55); line-height: 1.65; max-width: 500px; }
-
+ 
   /* BOTTOM CTA */
   .bottom-cta { text-align: center; padding: 40px 0 0; animation: fadeUp 0.6s 0.55s ease both; }
   .cta-btn { padding: 16px 44px; background: #5b9bd5; color: #0b1628; border: none; border-radius: 2px; font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.15s; }
   .cta-btn:hover { background: #89c0f0; }
   .cta-meta { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(232,237,245,0.22); margin-top: 14px; }
-
+ 
   footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid rgba(232,237,245,0.06); text-align: center; font-family: 'Rajdhani', sans-serif; font-size: 11px; letter-spacing: 0.08em; color: rgba(232,237,245,0.16); animation: fadeIn 1s 0.8s ease both; }
-
+ 
   @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
   @keyframes fadeDown { from { opacity:0; transform:translateY(-10px); } to { opacity:1; transform:translateY(0); } }
   @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
+ 
   @media (max-width: 520px) {
     .input-row { flex-direction: column; }
     .email-field { border-right: 1px solid rgba(232,237,245,0.1); border-bottom: none; border-radius: 2px 2px 0 0; }
@@ -138,10 +138,10 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- Hidden iframe for form submission -->
 <iframe name="hidden-iframe" style="display:none;"></iframe>
-
+ 
 <!-- Background -->
 <div class="bg" id="bg">
   <div class="bg-circle"></div>
@@ -154,21 +154,21 @@
     <rect x="58" y="128" width="24" height="28" rx="4" fill="white" opacity="0.5"/>
   </svg>
 </div>
-
+ 
 <div class="page">
   <div class="topbar">
     <div class="brand">NXT Wave Research</div>
     <div class="badge"><div class="dot"></div>Live Webinar — Free</div>
   </div>
-
+ 
   <div class="rule"></div>
-
+ 
   <div class="meta">
     <span>📅 Thursday, May 14, 2026</span>
     <span>🕔 5:00 PM ET</span>
     <span>💻 Online · Free</span>
   </div>
-
+ 
   <div class="title">SpaceX</div>
   <div class="subtitle">Is Just the Beginning</div>
   <div class="hrule"></div>
@@ -176,7 +176,7 @@
     Tiny space stocks that could surge before — and after — the IPO.<br>
     This Thursday at 5 PM ET, Matt McCall goes live to reveal the small-cap plays most investors won't find until it's too late.
   </p>
-
+ 
   <div class="form-card" id="formCard">
     <div id="formInner">
       <div class="form-title">Reserve Your Spot</div>
@@ -195,7 +195,7 @@
       <p>We'll send you a reminder Thursday at 5 PM ET when Matt goes live.<br>Don't miss it — this one could move fast.</p>
     </div>
   </div>
-
+ 
   <div class="section">
     <div class="section-label">What You'll Learn Thursday Night</div>
     <ul class="bullets">
@@ -205,7 +205,7 @@
       <li><span class="num">04</span><span>Matt's top picks and exactly what he's watching right now — revealed live, in real time</span></li>
     </ul>
   </div>
-
+ 
   <div class="presenter">
     <div class="avatar">MM</div>
     <div>
@@ -213,17 +213,17 @@
       <div class="pbio">Founder of NXT Wave Research. One of the most recognized names in early-stage investing, Matt has spent decades identifying small-cap stocks before Wall Street catches on. Thursday, he's sharing exactly where he's looking in the space sector.</div>
     </div>
   </div>
-
+ 
   <div class="bottom-cta">
     <button class="cta-btn" onclick="document.getElementById('formCard').scrollIntoView({behavior:'smooth'}); setTimeout(()=>document.getElementById('emailInput').focus(),400)">
       Save My Seat — It's Free
     </button>
     <div class="cta-meta">Thursday, May 14 · 5:00 PM ET · Online</div>
   </div>
-
+ 
   <footer>© 2026 NXT Wave Research &nbsp;·&nbsp; Unsubscribe</footer>
 </div>
-
+ 
 <script>
   // Generate stars
   (function() {
@@ -236,7 +236,7 @@
       bg.appendChild(s);
     }
   })();
-
+ 
   function handleSubmit(e) {
     setTimeout(function() {
       document.getElementById('formInner').style.display = 'none';
@@ -246,3 +246,4 @@
 </script>
 </body>
 </html>
+ 
