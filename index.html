@@ -10,15 +10,61 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { background: #0b1628; color: #e8edf5; font-family: 'Source Serif 4', Georgia, serif; font-weight: 300; min-height: 100vh; overflow-x: hidden; }
 
-  .bg { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
-  .bg-circle { position: absolute; top: -200px; right: -200px; width: 720px; height: 720px; border-radius: 50%; border: 1px solid rgba(91,155,213,0.07); background: radial-gradient(circle at 40% 40%, rgba(91,155,213,0.06) 0%, transparent 60%); }
-  .bg-circle-2 { position: absolute; bottom: -140px; left: -140px; width: 520px; height: 520px; border-radius: 50%; border: 1px solid rgba(91,155,213,0.04); }
-  .sweep { position: absolute; top: 0; right: 0; width: 70%; height: 1px; background: linear-gradient(90deg, transparent, rgba(91,155,213,0.35), transparent); transform: rotate(-16deg) translateY(300px); }
-  .bg-rocket { position: absolute; bottom: 40px; right: 60px; opacity: 0.05; }
-  .star { position: absolute; border-radius: 50%; background: white; pointer-events: none; animation: twinkle var(--dur,3s) ease-in-out infinite var(--delay,0s); }
-  @keyframes twinkle { 0%,100% { opacity: var(--op,.4); } 50% { opacity: 0.05; } }
+  /* ── BACKGROUND ── */
+  .bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .bg-circle {
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 720px; height: 720px;
+    border-radius: 50%;
+    border: 1px solid rgba(91,155,213,0.07);
+    background: radial-gradient(circle at 40% 40%, rgba(91,155,213,0.06) 0%, transparent 60%);
+  }
+  .bg-circle-2 {
+    position: absolute;
+    bottom: -140px; left: -140px;
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    border: 1px solid rgba(91,155,213,0.04);
+  }
+  .sweep {
+    position: absolute;
+    top: 0; right: 0;
+    width: 70%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(91,155,213,0.35), transparent);
+    transform: rotate(-16deg) translateY(300px);
+  }
+  .bg-rocket {
+    position: absolute;
+    bottom: 40px; right: 60px;
+    opacity: 0.05;
+  }
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    pointer-events: none;
+    animation: twinkle var(--dur,3s) ease-in-out infinite var(--delay,0s);
+  }
+  @keyframes twinkle {
+    0%,100% { opacity: var(--op,.4); }
+    50% { opacity: 0.05; }
+  }
 
-  .page { position: relative; z-index: 2; max-width: 780px; margin: 0 auto; padding: 0 28px 80px; }
+  /* ── PAGE ── */
+  .page {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 28px 80px;
+  }
 
   .topbar { display: flex; align-items: center; justify-content: space-between; padding: 32px 0 0; animation: fadeDown 0.6s ease both; }
   .brand { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: #89c0f0; }
@@ -36,6 +82,7 @@
   .hrule { width: 40px; height: 2px; background: #5b9bd5; margin: 18px 0; animation: fadeUp 0.6s 0.34s ease both; }
   .tagline { font-size: 15px; line-height: 1.75; color: rgba(232,237,245,0.55); max-width: 540px; font-weight: 300; margin-bottom: 44px; animation: fadeUp 0.6s 0.36s ease both; }
 
+  /* FORM */
   .form-card { background: #112244; border: 1px solid rgba(91,155,213,0.22); border-radius: 3px; padding: 36px 36px 30px; margin: 44px 0; position: relative; animation: fadeUp 0.6s 0.4s ease both; }
   .form-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #5b9bd5, transparent); border-radius: 3px 3px 0 0; }
   .form-title { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; color: #e8edf5; }
@@ -54,17 +101,20 @@
   .success-msg h3 { font-family: 'Rajdhani', sans-serif; font-size: 28px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #89c0f0; margin-bottom: 8px; }
   .success-msg p { font-size: 14px; color: rgba(232,237,245,0.55); line-height: 1.65; }
 
+  /* BULLETS */
   .section { margin: 52px 0; animation: fadeUp 0.6s 0.44s ease both; }
   .section-label { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: #5b9bd5; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(91,155,213,0.22); }
   .bullets { list-style: none; display: flex; flex-direction: column; gap: 16px; }
   .bullets li { display: flex; gap: 18px; font-size: 15px; line-height: 1.7; color: rgba(232,237,245,0.72); }
   .num { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 12px; color: #5b9bd5; letter-spacing: 0.06em; min-width: 24px; padding-top: 3px; flex-shrink: 0; }
 
+  /* PRESENTER */
   .presenter { display: flex; align-items: center; gap: 22px; background: rgba(91,155,213,0.1); border: 1px solid rgba(91,155,213,0.22); border-radius: 3px; padding: 26px 28px; margin: 52px 0; animation: fadeUp 0.6s 0.5s ease both; }
   .avatar { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, rgba(91,155,213,0.22), rgba(91,155,213,0.04)); border: 1px solid rgba(91,155,213,0.22); display: flex; align-items: center; justify-content: center; font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 20px; color: #89c0f0; flex-shrink: 0; }
   .pname { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 5px; color: #e8edf5; }
   .pbio { font-size: 13px; color: rgba(232,237,245,0.55); line-height: 1.65; max-width: 500px; }
 
+  /* BOTTOM CTA */
   .bottom-cta { text-align: center; padding: 40px 0 0; animation: fadeUp 0.6s 0.55s ease both; }
   .cta-btn { padding: 16px 44px; background: #5b9bd5; color: #0b1628; border: none; border-radius: 2px; font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.15s; }
   .cta-btn:hover { background: #89c0f0; }
@@ -89,8 +139,10 @@
 </head>
 <body>
 
+<!-- Hidden iframe for form submission -->
 <iframe name="hidden-iframe" style="display:none;"></iframe>
 
+<!-- Background -->
 <div class="bg" id="bg">
   <div class="bg-circle"></div>
   <div class="bg-circle-2"></div>
@@ -166,13 +218,14 @@
     <button class="cta-btn" onclick="document.getElementById('formCard').scrollIntoView({behavior:'smooth'}); setTimeout(()=>document.getElementById('emailInput').focus(),400)">
       Save My Seat — It's Free
     </button>
-    <div class="cta-meta">Thursday, May 14 · 5:00 PM ET · YouTube</div>
+    <div class="cta-meta">Thursday, May 14 · 5:00 PM ET · Online</div>
   </div>
 
-  <footer>© 2026 NXT Wave Research</footer>
+  <footer>© 2026 NXT Wave Research &nbsp;·&nbsp; Unsubscribe</footer>
 </div>
 
 <script>
+  // Generate stars
   (function() {
     var bg = document.getElementById('bg');
     for (var i = 0; i < 160; i++) {
