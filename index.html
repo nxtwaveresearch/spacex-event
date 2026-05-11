@@ -115,4 +115,81 @@
     <span>📅 Thursday, May 14, 2026</span>
     <span>🕔 5:00 PM ET</span>
     <span>▶️ YouTube · Free</span>
-  </div
+  </div>
+
+  <div class="title">SpaceX</div>
+  <div class="subtitle">Is Just the Beginning</div>
+  <div class="hrule"></div>
+  <p class="tagline">
+    Tiny space stocks that could surge before — and after — the IPO.<br>
+    This Thursday at 5 PM ET, Matt McCall goes live to reveal the small-cap plays most investors won't find until it's too late.
+  </p>
+
+  <div class="form-card" id="formCard">
+    <div id="formInner">
+      <div class="form-title">Reserve Your Spot</div>
+      <div class="form-sub">Enter your email and we'll notify you the moment Matt goes live. Free to attend — no credit card required.</div>
+      <form action="https://script.google.com/macros/s/AKfycbxk1BWLCZOR89kwnA4t0VpRNzatrUMEumjmGU6aUMg7pQNWnNl8RjBlpUwD2l2cyjmd/exec" method="GET" target="hidden-iframe" onsubmit="handleSubmit(event)">
+        <div class="input-row">
+          <input class="email-field" type="email" name="email" id="emailInput" placeholder="your@email.com" required />
+          <button class="submit-btn" type="submit">Save My Seat</button>
+        </div>
+      </form>
+      <div class="form-fine">One reminder email only. No spam, ever.</div>
+    </div>
+    <div class="success-msg" id="successMsg">
+      <div class="check">🚀</div>
+      <h3>You're In.</h3>
+      <p>We'll send you a reminder Thursday at 5 PM ET when Matt goes live.<br>Don't miss it — this one could move fast.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">What You'll Learn Thursday Night</div>
+    <ul class="bullets">
+      <li><span class="num">01</span><span>Why the SpaceX IPO is a sector-wide catalyst — not just a single stock event — and what that means for your portfolio right now</span></li>
+      <li><span class="num">02</span><span>The small-cap space plays most Wall Street analysts aren't talking about yet — and why that window is closing fast</span></li>
+      <li><span class="num">03</span><span>How to position yourself before mainstream attention arrives and the easy money is already gone</span></li>
+      <li><span class="num">04</span><span>Matt's top picks and exactly what he's watching right now — revealed live, in real time</span></li>
+    </ul>
+  </div>
+
+  <div class="presenter">
+    <div class="avatar">MM</div>
+    <div>
+      <div class="pname">Matt McCall</div>
+      <div class="pbio">Founder of NXT Wave Research. One of the most recognized names in early-stage investing, Matt has spent decades identifying small-cap stocks before Wall Street catches on. Thursday, he's sharing exactly where he's looking in the space sector.</div>
+    </div>
+  </div>
+
+  <div class="bottom-cta">
+    <button class="cta-btn" onclick="document.getElementById('formCard').scrollIntoView({behavior:'smooth'}); setTimeout(()=>document.getElementById('emailInput').focus(),400)">
+      Save My Seat — It's Free
+    </button>
+    <div class="cta-meta">Thursday, May 14 · 5:00 PM ET · YouTube</div>
+  </div>
+
+  <footer>© 2026 NXT Wave Research</footer>
+</div>
+
+<script>
+  (function() {
+    var bg = document.getElementById('bg');
+    for (var i = 0; i < 160; i++) {
+      var s = document.createElement('div');
+      s.className = 'star';
+      var sz = Math.random() * 1.8 + 0.3;
+      s.style.cssText = 'width:'+sz+'px;height:'+sz+'px;top:'+(Math.random()*100)+'%;left:'+(Math.random()*100)+'%;--dur:'+(Math.random()*4+2).toFixed(1)+'s;--delay:'+(Math.random()*6).toFixed(1)+'s;--op:'+(Math.random()*0.5+0.1).toFixed(2)+';';
+      bg.appendChild(s);
+    }
+  })();
+
+  function handleSubmit(e) {
+    setTimeout(function() {
+      document.getElementById('formInner').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    }, 500);
+  }
+</script>
+</body>
+</html>
